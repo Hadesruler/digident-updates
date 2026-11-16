@@ -24,9 +24,13 @@ a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:poi
 .digident-brand{display:flex;align-items:center;gap:13px;min-width:0}
 .brand-wordmark{display:block;object-fit:contain;width:clamp(145px,19vw,220px);height:auto;max-width:100%}
 .brand-caption{color:#b79bd7;letter-spacing:.14em;font-size:9px;font-weight:800;white-space:nowrap}
-.product-icon.real-icon{position:relative;width:63px;height:63px;min-width:63px;overflow:hidden;border-radius:50%;border:3px solid #b675f9;background:#2c1743;box-shadow:0 0 0 3px rgba(183,117,249,.15),0 0 19px rgba(177,97,249,.4),inset 0 0 0 1px rgba(255,255,255,.15)}
-.product-icon.real-icon img{width:100%;height:100%;position:static;transform:none;object-fit:cover;border-radius:50%;display:block}
-@media(max-width:600px){.brand-caption{font-size:8px}.brand-wordmark{width:clamp(138px,37vw,200px)}.digident-brand{gap:8px}.product-icon.real-icon{width:57px;height:57px;min-width:57px}}
+.product-icon.real-icon{box-sizing:border-box;position:relative;display:flex;align-items:center;justify-content:center;flex:0 0 66px;width:66px;height:66px;min-width:66px;padding:7px;overflow:hidden;border-radius:50%;border:2.5px solid #ba7aff;background:radial-gradient(circle at 35% 25%,#3a255b 0%,#241638 58%,#121122 100%);box-shadow:0 0 0 4px rgba(183,117,249,.14),0 0 22px rgba(177,97,249,.35),inset 0 0 12px rgba(193,148,255,.12)}
+.product-icon.real-icon:after{content:"";position:absolute;inset:4px;pointer-events:none;border-radius:50%;border:1px solid rgba(224,193,255,.25)}
+.product-icon.real-icon img{display:block;position:static!important;transform:none!important;flex:0 0 auto;max-width:100%;width:100%;height:100%;object-fit:contain;object-position:50% 50%;border-radius:50%;background:#ef885f}
+.product-icon.real-icon.dentalcad img{width:89%;height:89%}
+.product-icon.real-icon.exoplan img{width:91%;height:91%}
+.product-icon.real-icon.partialcad img{width:90%;height:90%}
+@media(max-width:600px){.brand-caption{font-size:8px}.brand-wordmark{width:clamp(138px,37vw,200px)}.digident-brand{gap:8px}.product-icon.real-icon{width:60px;height:60px;min-width:60px;flex-basis:60px;padding:6px}}
 </style>
 </head>
 <body>
@@ -54,13 +58,13 @@ a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:poi
 <div class="tools"><label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="Search products, builds..." aria-label="Search downloads"></label><div class="chips" aria-label="Category"><button class="chip active" data-filter="all" data-el="Όλα" data-en="All">Όλα</button><button class="chip" data-filter="main" data-el="Προγράμματα" data-en="Applications">Προγράμματα</button><button class="chip" data-filter="tools" data-el="Εργαλεία" data-en="Utilities">Εργαλεία</button></div></div>
 <div class="grid" id="cards">
 <article class="card" data-category="main" data-search="dentalcad 3.3 chemnitz sr2 build 9796 cad exocad">
-<div class="card-header"><span class="product-icon real-icon"><img src="https://bcontent.exocad.com/fileadmin/content/products/dental-cad/Icons/DentalCAD_Icon.jpg" alt="DentalCAD" width="70" height="70" loading="lazy"></span><div style="flex:1"><h3>DentalCAD</h3><div class="subtitle">3.3 Chemnitz · Service Release 2</div></div><span class="pill">LATEST</span></div>
+<div class="card-header"><span class="product-icon real-icon dentalcad"><img src="https://bcontent.exocad.com/fileadmin/content/products/dental-cad/Icons/DentalCAD_Icon.jpg" alt="DentalCAD" width="70" height="70" loading="lazy"></span><div style="flex:1"><h3>DentalCAD</h3><div class="subtitle">3.3 Chemnitz · Service Release 2</div></div><span class="pill">LATEST</span></div>
 <div class="meta"><span>Build 9796</span><span>27.10.2026</span><span>7z · ~3.6 GB</span></div>
 <p data-el="AI Design με batch processing, ανίχνευση ορίων παρασκευής, βελτιώσεις Implant Module και συμβατότητα με το νέο exoplan. Απαιτεί exocad Framework 2026." data-en="AI Design batch processing, AI preparation margin detection, Implant Module improvements and compatibility with the latest exoplan. Requires exocad Framework 2026.">AI Design με batch processing, ανίχνευση ορίων παρασκευής, βελτιώσεις Implant Module και συμβατότητα με το νέο exoplan. Απαιτεί exocad Framework 2026.</p>
 <div class="card-footer"><a class="btn primary" target="_blank" rel="noopener noreferrer" href="https://cdn.exocad.com/delivery/46cb1bc32b8c7473f6fd559f4950c84325ded04e6eefa79a337745e646a38088/exocad-DentalCAD3.3-SR2-2026-10-27.7z" data-el="↓ Λήψη DentalCAD" data-en="↓ Download DentalCAD">↓ Λήψη DentalCAD</a></div>
 </article>
 <article class="card" data-category="main" data-search="exoplan 3.3 chemnitz implant planning guides bone reduction build">
-<div class="card-header"><span class="product-icon real-icon"><img src="https://evolve-files.storage.googleapis.com/wp-content/uploads/2024/05/15190241/Untitled-14-1.png" alt="exoplan icon" width="72" height="72" loading="lazy"></span><div style="flex:1"><h3>exoplan</h3><div class="subtitle">3.3 Chemnitz · Implant Planning</div></div><span class="pill">NEW</span></div>
+<div class="card-header"><span class="product-icon real-icon exoplan"><img src="https://evolve-files.storage.googleapis.com/wp-content/uploads/2024/05/15190241/Untitled-14-1.png" alt="exoplan icon" width="72" height="72" loading="lazy"></span><div style="flex:1"><h3>exoplan</h3><div class="subtitle">3.3 Chemnitz · Implant Planning</div></div><span class="pill">NEW</span></div>
 <div class="meta"><span>3.3 Chemnitz</span><span>22.09.2026</span><span>7z · ~3.7 GB</span></div>
 <p data-el="Stackable surgical guides, bone reduction, Guide Composer και αυτόματη ευθυγράμμιση CBCT/scan. Ορισμένες λειτουργίες απαιτούν Guide Creator." data-en="Stackable surgical guides, bone reduction, Guide Composer and automatic CBCT-to-scan alignment. Some functions require Guide Creator.">Stackable surgical guides, bone reduction, Guide Composer και αυτόματη ευθυγράμμιση CBCT/scan. Ορισμένες λειτουργίες απαιτούν Guide Creator.</p>
 <div class="card-footer"><a class="btn primary" target="_blank" rel="noopener noreferrer" href="https://cdn.exocad.com/delivery/exoplan/e5f137323cf139d533f43c7f0fd18f2c5e52e953b66750b9c94a1fede5dcb9a1/exocad-exoplan3.3-2026-09-22.7z" data-el="↓ Λήψη exoplan" data-en="↓ Download exoplan">↓ Λήψη exoplan</a></div>
@@ -72,7 +76,7 @@ a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:poi
 <div class="card-footer"><a class="btn primary" target="_blank" rel="noopener noreferrer" href="https://cdn.exocad.com/delivery/exocadFramework2026.exe" data-el="↓ Λήψη Framework" data-en="↓ Download Framework">↓ Λήψη Framework</a></div>
 </article>
 <article class="card" data-category="main" data-search="partialcad 3.3 chemnitz build 691 cast partial denture">
-<div class="card-header"><span class="product-icon real-icon"><img src="https://www.protechno.com/660-large_default/PartialCAD-module.jpg" alt="PartialCAD" width="70" height="70" loading="lazy"></span><div style="flex:1"><h3>PartialCAD</h3><div class="subtitle">3.3 Chemnitz · Partial Dentures</div></div><span class="pill">3.3</span></div>
+<div class="card-header"><span class="product-icon real-icon partialcad"><img src="https://www.protechno.com/660-large_default/PartialCAD-module.jpg" alt="PartialCAD" width="70" height="70" loading="lazy"></span><div style="flex:1"><h3>PartialCAD</h3><div class="subtitle">3.3 Chemnitz · Partial Dentures</div></div><span class="pill">3.3</span></div>
 <div class="meta"><span>Build 691</span><span>7z</span><span>Windows x64</span></div>
 <p data-el="Εργαλεία σχεδίασης μερικών οδοντοστοιχιών και μεταλλικών σκελετών, με νέες επιλογές για split denture workflow." data-en="Tools for designing partial dentures and metal frameworks, with new split denture workflow options.">Εργαλεία σχεδίασης μερικών οδοντοστοιχιών και μεταλλικών σκελετών, με νέες επιλογές για split denture workflow.</p>
 <div class="card-footer"><a class="btn primary" target="_blank" rel="noopener noreferrer" href="https://cdn.exocad.com/delivery/partialCAD/PartialCADApp.3.3.691-C3R9L1-Chemnitz.7z" data-el="↓ Λήψη PartialCAD" data-en="↓ Download PartialCAD">↓ Λήψη PartialCAD</a></div>
